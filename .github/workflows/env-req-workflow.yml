@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: https://github.com/rgaur726/MercuryHealth-Actions/.github/actions/env-req-parser@master
+      - uses: nkpatterson/MercuryHealth-Actions/.github/actions/env-req-parser@master
         id: parser
 
       - uses: azure/login@v1
