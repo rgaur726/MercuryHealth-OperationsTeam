@@ -16,7 +16,7 @@ jobs:
       - uses: azure/login@v1
         if: steps.parser.outputs.approved
         with:
-          creds: ${{ secrets.MercuryHealthGitHubActionsSP }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - uses: azure/CLI@v1
         if: steps.parser.outputs.approved
