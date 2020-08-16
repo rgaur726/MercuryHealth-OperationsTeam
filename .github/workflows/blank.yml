@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: rgaur726/MercuryHealth-Actions/.github/actions/env-req-parser@master
+      - uses: https://github.com/rgaur726/MercuryHealth-Actions/.github/actions/env-req-parser@master
         id: parser
 
       - uses: azure/login@v1
         if: steps.parser.outputs.approved
         with:
-          creds: ${{ secrets.MercuryHealthGitHubActionsSP }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - uses: azure/CLI@v1
         if: steps.parser.outputs.approved
